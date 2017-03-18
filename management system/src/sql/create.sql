@@ -174,9 +174,4 @@ CREATE TABLE user
   ENGINE = InnoDB;
 CREATE UNIQUE INDEX idx_user_username ON user (user_id);
 
-#ALTER TABLE staff ADD CONSTRAINT fk_user_staff FOREIGN KEY (staff_id) REFERENCES orders (user_id);
-ALTER TABLE order_book ADD CONSTRAINT fk_courses_user_books_classe FOREIGN KEY (staffs_id) REFERENCES staffs (staff_id),
-FOREIGN KEY (book_title,isbn) REFERENCES book (book_title,isbn),
-FOREIGN KEY (grade,professional,department) REFERENCES class (grade,professional,department),
-FOREIGN KEY (course_id) REFERENCES course (courses_id);
 
